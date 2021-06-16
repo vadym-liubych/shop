@@ -1,0 +1,204 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__content {
+    @media (min-width: 1024px) {
+      $headerContentPaddingX: 30px;
+      margin: 0 auto;
+      max-width: 1140px + 2 * $headerContentPaddingX;
+      width: calc(100% - 2 * #{$headerContentPaddingX});
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    &-button {
+      font-family: $font;
+      position: relative;
+      width: 127px;
+      height: 44px;
+      padding-left: 19px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 27px;
+      text-align: left;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      background: #cddde2;
+      color: $black;
+      border: none;
+      cursor: pointer;
+
+      &--user::after {
+        background-image: url(/img/icons/user.svg);
+      }
+
+      &--cart {
+        margin-right: 15px;
+        &::after {
+          background-image: url(/img/icons/shopping-cart.svg);
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        top: 11px;
+        left: 90px;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        border: none;
+      }
+    }
+  }
+
+  &__logo {
+    font-family: "Intro Black", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 34px;
+    letter-spacing: -0.15em;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 20px;
+
+    @media (min-width: 1024px) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: column;
+    height: 30px;
+    padding: 0 12px;
+    background: $black;
+    color: #fff;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-announcement {
+      display: none;
+      font-family: $font;
+      align-items: center;
+      padding-left: 198px - 12px;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 13px;
+
+      @media (min-width: 1024px) {
+        display: flex;
+      }
+    }
+
+    &-offer {
+      display: flex;
+      justify-content: flex-end;
+
+      &-text {
+        font-family: $font;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        padding-right: 10px;
+      }
+
+      &-close {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        color: #fff;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    background: #eef5f7;
+    padding-bottom: 20px;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 0;
+    }
+  }
+
+  &__nav {
+    backdrop-filter: blur(6px);
+  }
+}
+
+.form {
+  &__section {
+    display: block;
+  }
+
+  &__search {
+    width: 280px;
+    outline: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height: 36px;
+    padding-left: 8px;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: $black;
+    border: 1.2px solid $gray;
+    border-radius: 6px;
+
+    @media (min-width: 375px) {
+      width: 309px;
+    }
+
+    &::placeholder {
+      font-family: $font;
+      line-height: 18px;
+      color: $gray;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+  height: 90px;
+
+  &__tel {
+    font-family: $font;
+    text-align: right;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: $black;
+    margin-bottom: 10px;
+  }
+}
