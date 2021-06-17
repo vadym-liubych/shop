@@ -1,0 +1,19 @@
+$starsCount: 3;
+
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url(../img/icons/star.svg);
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 15px;
+    margin-right: 4px;
+    background-position: center;
+    cursor: pointer;
+
+    &--active {
+      background-image: url(../img/icons/star-active.svg);
+    }
+  }
+}
