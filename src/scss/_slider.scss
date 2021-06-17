@@ -1,0 +1,17 @@
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  height: 24px;
+  width: 24px;
+}
+
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url(../img/icons/arrow-left.svg) 0 0 no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url(../img/icons/arrow-right.svg) 0 0 no-repeat;
+}

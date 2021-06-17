@@ -1,5 +1,6 @@
 .card {
   width: 203px;
+  min-width: 0;
   height: 320px;
   padding: 14px;
   border: 1px solid #f3f3f3;
@@ -52,6 +53,7 @@
   }
 
   &__hr {
+    width: 173px;
     border: 1.00163px solid #cddde2;
     margin-bottom: 28px;
   }
